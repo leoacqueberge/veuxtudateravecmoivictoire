@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "TikTok Sans";
+  src: url("/fonts/TikTokSans-VariableFont.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-display: "TikTok Sans", sans-serif;
+  --font-body: "TikTok Sans", sans-serif;
+  --color-kawaii-pink: #ffb6c1;
+  --color-kawaii-rose: #ff8fab;
+  --color-kawaii-lavender: #e6e6fa;
+  --color-kawaii-cream: #fff5f7;
+  --color-kawaii-coral: #ff6b8a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes sparkle {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-sparkle {
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+input[type="date"],
+input[type="time"] {
+  color-scheme: light;
+}
